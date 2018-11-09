@@ -1,0 +1,31 @@
+name: geogebra6
+version: '6.0.509.0'
+summary: GeoGebra Classic 6
+description: |
+  Dynamic mathematics software with interactive graphics, algebra and spreadsheet
+confinement: devmode
+
+apps:
+  geogebra6:
+    command: usr/share/geogebra-classic/GeoGebra
+
+parts:
+  geogebra:
+    plugin: dump
+    source-type: deb
+    source: http://www.geogebra.net/linux/pool/main/g/geogebra-classic/geogebra-classic_6.0.509.0-201811041747_amd64.deb
+    stage-packages:
+      - libgtk2.0-0
+      - libxtst6
+      - libgconf-2-4
+      - libnss3
+      - libgmp10
+      - libstdc++6
+      - libxss1
+      - libx11-xcb1
+      - libasound2
+    build-packages:
+      - wget
+      - unzip
+    after:
+      - desktop-gtk2
