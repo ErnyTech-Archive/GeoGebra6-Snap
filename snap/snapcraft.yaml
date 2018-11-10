@@ -24,6 +24,8 @@ parts:
       - libxss1
       - libx11-xcb1
       - libasound2
+      - libatk-adaptor
+      - libgail-common
     build-packages:
       - wget
       - unzip
