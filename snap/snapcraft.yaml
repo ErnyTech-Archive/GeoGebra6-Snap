@@ -7,7 +7,7 @@ confinement: devmode
 
 apps:
   geogebra6:
-    command: usr/share/geogebra-classic/GeoGebra
+    command: bin/desktop-launch $SNAP/usr/share/geogebra-classic/GeoGebra
 
 parts:
   geogebra:
